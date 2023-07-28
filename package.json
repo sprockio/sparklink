@@ -1,0 +1,13 @@
+{
+  "name": "sparklink",
+  "version": "1.0.0",
+  "description": "Respond to spark:// links with a clickable http link in discord",
+  "main": "bot.js",
+  "author": "a@sprock.io",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "discord.js": "^14.10.0",
+    "dotenv": "^16.0.3"
+  }
+}
