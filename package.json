@@ -1,6 +1,6 @@
 {
   "name": "sparklink",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Respond to spark:// links with a clickable http link in discord",
   "main": "src/bot.js",
   "author": "a@sprock.io",

@@ -9,7 +9,7 @@ const sparkRegex = /.*(?<!sprock\.io\/)spark:\/\/([jsc]\/[-0-9A-F]{36}).*/gi;
 
 require('dotenv').config();
 
-const targetDate = new Date('2023-08-01T00:00:00Z');
+const targetDate = new Date('2023-08-01T00:00:00.000-07:00');
 
 function timerString() {
 
@@ -67,7 +67,6 @@ client.on('ready', () => {
 
 client.on('messageCreate', msg => {
     if (!msg.author.bot) {
-
 
         if (sparkRegex.test(msg.content)) {
 
