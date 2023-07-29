@@ -19,10 +19,23 @@ function timerString() {
     const diffHours = Math.floor((diffMs % 86400e3) / 3600e3);
     const diffMinutes = Math.floor((diffMs % 3600000) / 60e3);
     const diffSeconds = Math.floor((diffMs % 60e3) / 1e3);
+    const statusText = '';
 
-    const statusText = `for ${diffDays} more days`;
+  if (diffMs < 0) { // countdown
+    if (diffDays > 0) { // more than a day
+      statusText = `for ${diffDays} more days`;
+    } else {
+      if (diffHours > 0) {
+        statusText = `for ${diffHours} more hours`;
+      } else {
+        statusText = `for ${diffMinutes} more minutes`;
+      }
+    }
+  } else { // timer
+    statusText = "on borrowed time...";
+  }
 
-    return statusText
+  return statusText
 }
 
 
